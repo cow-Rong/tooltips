@@ -1,0 +1,25 @@
+{
+  "name": "tooltips",
+  "version": "1.0.0",
+  "description": "example of tooltips in three.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cow-Rong/tooltips.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cow-Rong/tooltips/issues"
+  },
+  "homepage": "https://github.com/cow-Rong/tooltips#readme",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "three": "^0.123.0"
+  }
+}
