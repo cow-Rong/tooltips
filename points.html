@@ -9,7 +9,7 @@
 
 	<body>
 		<div id="container"></div>
-		<div id="info"><a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - interactive - raycasting - points </div>
+		<!-- <div id="info"><a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - interactive - raycasting - points </div> -->
 
 		<script type="module">
 
@@ -164,17 +164,17 @@
 				pcBuffer.position.set( - 5, 0, 0 );
 				scene.add( pcBuffer );
 
-				const pcIndexed = generateIndexedPointcloud( new THREE.Color( 0, 1, 0 ), width, length );
-				pcIndexed.scale.set( 5, 10, 10 );
-				pcIndexed.position.set( 0, 0, 0 );
-				scene.add( pcIndexed );
+				// const pcIndexed = generateIndexedPointcloud( new THREE.Color( 0, 1, 0 ), width, length );
+				// pcIndexed.scale.set( 5, 10, 10 );
+				// pcIndexed.position.set( 0, 0, 0 );
+				// scene.add( pcIndexed );
 
-				const pcIndexedOffset = generateIndexedWithOffsetPointcloud( new THREE.Color( 0, 1, 1 ), width, length );
-				pcIndexedOffset.scale.set( 5, 10, 10 );
-				pcIndexedOffset.position.set( 5, 0, 0 );
-				scene.add( pcIndexedOffset );
+				// const pcIndexedOffset = generateIndexedWithOffsetPointcloud( new THREE.Color( 0, 1, 1 ), width, length );
+				// pcIndexedOffset.scale.set( 5, 10, 10 );
+				// pcIndexedOffset.position.set( 5, 0, 0 );
+				// scene.add( pcIndexedOffset );
 
-				pointclouds = [ pcBuffer, pcIndexed, pcIndexedOffset ];
+				pointclouds = [ pcBuffer];
 
 				//
 
@@ -242,7 +242,7 @@
 
 			function render() {
 
-				camera.applyMatrix4( rotateY );
+				// camera.applyMatrix4( rotateY );
 				camera.updateMatrixWorld();
 
 				raycaster.setFromCamera( mouse, camera );
