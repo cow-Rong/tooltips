@@ -39,8 +39,6 @@
 	</div>
 
 	<script src="./node_modules/three/build/three.js"></script>
-
-	<!-- <script src="./node_modules/three/examples/js/Detector.js"></script> -->
 	<script src="./node_modules/three/examples/js/libs/stats.min.js"></script>
 	<script src="./tween.umd.js"></script>
 	<script>
@@ -52,7 +50,7 @@
 		// import TWEEN from './node_modules/three/examples/jsm/libs/tween.module.min.js';
 
 		// if (!Detector.webgl) Detector.addGetWebGLMessage();
-		var flag = true;//是否开始变换
+		var flag = false;//是否开始变换
 		var container, stats;
 		var camera, scene, renderer, particles, geometry, material, glist = [];// glist 点阵数组
 		var around, aroundMaterial, aroundPoints;// 环境点组
@@ -140,71 +138,67 @@
 		}
 
 		function loadObject() {
-			var loader = new THREE.ObjectLoader();
-			loader.load('obj/cpgame3.json', function (geo, materials) {
-				var colors = [];
-				for (var i = 0; i < geo.vertices.length; i++) {
+			var colors = [];
+			// var geo = new THREE.BoxGeometry(32, 32, 32 );
+			// for (var i = 0; i < geo.vertices.length; i++) {
+			// 		colors.push(new THREE.Color("rgb(255, 255, 255)"))
+			// 	}
+
+			// 	geo.colors = colors;
+			// 	geo.center();
+			// 	geo.normalize();
+
+			// 	geo.scale(500, 500, 500)
+			// 	geo.rotateX(Math.PI / 4)
+			// 	geo.rotateY(-Math.PI / 8)
+			// 	glist.push(geo)
+
+
+				colors = [];
+				var geo2 = new THREE.SphereGeometry( 5, 32, 32 );
+				for (var i = 0; i < geo2.vertices.length; i++) {
 					colors.push(new THREE.Color("rgb(255, 255, 255)"))
 				}
 
-				geo.colors = colors;
-				geo.center();
-				geo.normalize();
+				geo2.colors = colors;
+				geo2.center();
+				geo2.normalize();
 
-				geo.scale(500, 500, 500)
-				geo.rotateX(Math.PI / 4)
-				geo.rotateY(-Math.PI / 8)
-				glist.push(geo)
-			})
-			loader.load('obj/cpbook2.json', function (geo, materials) {
-				var colors = [];
-				for (var i = 0; i < geo.vertices.length; i++) {
-					colors.push(new THREE.Color(1, 1, 1))
+				geo2.scale(500, 500, 500)
+				geo2.rotateX(Math.PI / 4)
+				geo2.rotateY(-Math.PI / 8)
+				glist.push(geo2)
+
+			colors = [];
+				var geo4 = new THREE.TorusGeometry( 10, 3, 16, 100 );
+				for (var i = 0; i < geo4.vertices.length; i++) {
+					colors.push(new THREE.Color("rgb(255, 255, 255)"))
 				}
 
-				geo.colors = colors;
-				geo.center();
-				geo.normalize();
+				geo4.colors = colors;
+				geo4.center();
+				geo4.normalize();
 
-				geo.scale(600, 600, 600)
-				glist.push(geo)
-			})
-			loader.load('obj/cpac5.json', function (geo, materials) {
-				var colors = [];
-				for (var i = 0; i < geo.vertices.length; i++) {
-					colors.push(new THREE.Color(1, 1, 1))
+				geo4.scale(500, 500, 500)
+				geo4.rotateX(Math.PI / 4)
+				geo4.rotateY(-Math.PI / 8)
+				glist.push(geo4)
+
+			colors = [];
+				var geo5 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+				for (var i = 0; i < geo5.vertices.length; i++) {
+					colors.push(new THREE.Color("rgb(255, 255, 255)"))
 				}
 
-				geo.colors = colors;
-				geo.center();
-				geo.normalize();
+				geo5.colors = colors;
+				geo5.center();
+				geo5.normalize();
 
-				geo.scale(600, 600, 600)
-				glist.push(geo)
-			})
-			loader.load('obj/cpkv3.json', function (geo, materials) {
-				var colors = [];
-				for (var i = 0; i < geo.vertices.length; i++) {
-					colors.push(new THREE.Color(1, 1, 1))
-				}
-
-				geo.colors = colors;
-				geo.center();
-				geo.normalize();
-
-				geo.scale(800, 800, 800);
-				geo.rotateX(Math.PI / 2);
-				glist.push(geo)
-			})
-			loader.load('obj/cpmovie4.json', function (geo, materials) {
-
-				geo.center();
-				geo.normalize();
-
-				geo.scale(800, 800, 800)
-				geo.translate(0, -300, 0)
-				glist.push(geo)
-			})
+				geo5.scale(500, 500, 500)
+				geo5.rotateX(Math.PI / 4)
+				geo5.rotateY(-Math.PI / 8)
+				glist.push(geo5)
+	
 		}
 
 		function onDocumentMouseWheel() {
@@ -214,12 +208,16 @@
 		function tweenObj(index) {
 			geometry.vertices.forEach(function (e, i, arr) {
 				var length = glist[index].vertices.length;
+				console.log(i);
+				console.log(geometry.vertices.length);
+				console.log(i % length);
+				console.log(length);
 				var o = glist[index].vertices[i % length];
 				new TWEEN.Tween(e).to({
 					x: o.x,
 					y: o.y,
 					z: o.z
-				}, 1000).easing(TWEEN.Easing.Exponential.In).delay(1000 * Math.random()).start();
+				}, 1000).easing(TWEEN.Easing.Exponential.In).delay(1000 * Math.random()).start();//Exponential ==> 指数曲线的缓动（）easeIn（In） ==> 加速，先慢后快
 			})
 			camera.position.z = 750;
 		}
@@ -238,7 +236,7 @@
 
 		function onDocumentKeyDown(event) {
 			debugger
-			if (event.which == 40 && objIndex < 4) {
+			if (event.which == 40 && objIndex < 2) {
 				objIndex++;
 				tweenObj(objIndex);
 				flag = true;
