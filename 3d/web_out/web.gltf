@@ -1,0 +1,350 @@
+{
+    "asset": {
+        "generator": "FBX2glTF v0.9.7",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 3624,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 12,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 48,
+            "byteOffset": 12,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 48,
+            "byteOffset": 60,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 32,
+            "byteOffset": 108,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 348,
+            "byteOffset": 140,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1176,
+            "byteOffset": 488,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1176,
+            "byteOffset": 1664,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 784,
+            "byteOffset": 2840,
+            "target": 34962
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 6,
+            "bufferView": 0,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 4,
+            "bufferView": 1,
+            "byteOffset": 0,
+            "min": [
+                -5.6611156463623,
+                -0.0225380174815655,
+                -9.85082244873047
+            ],
+            "max": [
+                5.6611156463623,
+                -0.0225380174815655,
+                -1.36944043636322
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 4,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 4,
+            "bufferView": 3,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 174,
+            "bufferView": 4,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 98,
+            "bufferView": 5,
+            "byteOffset": 0,
+            "min": [
+                -6.06841421127319,
+                -2.66347885131836,
+                -11.1732711791992
+            ],
+            "max": [
+                6.06841421127319,
+                0.975027501583099,
+                -0.962142765522003
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 98,
+            "bufferView": 6,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 98,
+            "bufferView": 7,
+            "byteOffset": 0
+        }
+    ],
+    "images": [
+        {
+            "name": "gongchengshi.jpg",
+            "uri": "gongchengshi.jpg"
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "textures": [
+        {
+            "name": "贴图 #29",
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "materials": [
+        {
+            "name": "03 - Default",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.00784313771873713,
+                    0.294117659330368,
+                    0.843137323856354,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        },
+        {
+            "name": "09 - Default",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.70710676908493
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "对象392",
+            "primitives": [
+                {
+                    "material": 1,
+                    "mode": 4,
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 3
+                    },
+                    "indices": 0
+                }
+            ]
+        },
+        {
+            "name": "017",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "NORMAL": 6,
+                        "POSITION": 5,
+                        "TEXCOORD_0": 7
+                    },
+                    "indices": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "工程师站",
+            "translation": [
+                -1.54234564304352,
+                0.342140734195709,
+                28.4497413635254
+            ],
+            "rotation": [
+                -0.70710676908493,
+                -0.0,
+                0.0,
+                0.70710676908493
+            ],
+            "scale": [
+                0.100000001490116,
+                0.100000001490116,
+                0.100000001490116
+            ],
+            "children": [
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "name": "obj_1455",
+            "translation": [
+                0.195229485630989,
+                -0.340195298194885,
+                1.54275047779083
+            ],
+            "rotation": [
+                0.684312522411346,
+                0.178090617060661,
+                0.178090751171112,
+                0.684312641620636
+            ],
+            "scale": [
+                2.55515956878662,
+                2.12673330307007,
+                1.92901253700256
+            ]
+        },
+        {
+            "name": "017",
+            "translation": [
+                0.0,
+                0.549570322036743,
+                3.94992065429688
+            ],
+            "rotation": [
+                9.46731101335174e-33,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                0.650974273681641,
+                0.650974273681641,
+                0.650974273681641
+            ],
+            "mesh": 1
+        },
+        {
+            "name": "对象392",
+            "translation": [
+                0.0,
+                0.549570322036743,
+                3.94992065429688
+            ],
+            "rotation": [
+                9.46731101335174e-33,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                0.650974273681641,
+                0.650974273681641,
+                0.650974273681641
+            ],
+            "mesh": 0
+        }
+    ]
+}
